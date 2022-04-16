@@ -12,14 +12,36 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blueGrey,
-        appBar: AppBar(
-          title: const Center(child: Text('Model')),
-          backgroundColor: Colors.blueGrey[900],
+        backgroundColor: Colors.teal,
+        body: SafeArea(
+          child: Container(
+            width: 100,
+            height: 100,
+            color: Colors.white,
+            // margin: EdgeInsets.symmetric(vertical: 50, horizontal: 10),
+            // margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
+            margin: EdgeInsets.only(left: 10.0),
+            padding: EdgeInsets.all(20.0),
+            child: Text('Hello man'),
+          ),
         ),
-        body: const Center(
-            child: Image(image: AssetImage('images/duongthu.jpg'))),
       ),
     );
   }
 }
+
+/**
+    Widget build(BuildContext context) {
+    return MaterialApp(
+    home: Scaffold(
+    backgroundColor: Colors.blueGrey,
+    appBar: AppBar(
+    title: const Center(child: Text('Model')),
+    backgroundColor: Colors.blueGrey[900],
+    ),
+    body: const Center(
+    child: Image(image: AssetImage('images/duongthu.jpg'))),
+    ),
+    );
+    }
+ * **/
