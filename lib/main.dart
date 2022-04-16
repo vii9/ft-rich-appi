@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 // https://scontent.fsgn2-6.fna.fbcdn.net/v/t39.30808-6/277529457_1382426902278271_8985568862916575328_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=l1Pc2mnJfbcAX88ffiB&tn=eGDGYlMCisCzmegM&_nc_ht=scontent.fsgn2-6.fna&oh=00_AT8ZaWH5qxEXvWk-AigOo4N_P4HmDGd-T7N3NTl5dwf1wg&oe=6249C30E
 void main() {
@@ -14,17 +15,45 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Container(
-            width: 100,
-            height: 100,
-            color: Colors.white,
-            // margin: EdgeInsets.symmetric(vertical: 50, horizontal: 10),
-            // margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
-            margin: EdgeInsets.only(left: 10.0),
-            padding: EdgeInsets.all(20.0),
-            child: Text('Hello man'),
-          ),
-        ),
+            child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: <Widget>[
+            Container(
+              width: 100.0,
+              height: 100.0,
+              color: Colors.white,
+              // margin: EdgeInsets.symmetric(vertical: 50, horizontal: 10),
+              // margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
+              child: Text('Hello 1'),
+            ),
+            SizedBox(
+              // #dnthanh#this is space
+              height: 20.0,
+            ),
+            Container(
+              width: 300.0,
+              height: 100.0,
+              color: Colors.red,
+              // margin: EdgeInsets.symmetric(vertical: 50, horizontal: 10),
+              // margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
+              child: Text('Hello 2'),
+            ),
+            Container(
+              width: 100.0,
+              height: 100.0,
+              color: Colors.blue,
+              // margin: EdgeInsets.symmetric(vertical: 50, horizontal: 10),
+              // margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
+              child: Text('Hello 333'),
+            ),
+            Container(
+              width: double.infinity,
+              height: 20.0,
+              color: Colors.yellowAccent,
+            )
+          ],
+        )),
       ),
     );
   }
