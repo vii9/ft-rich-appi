@@ -17,13 +17,14 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Column(
             mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/girl.jpg'),
               ),
               const Text(
-                'Thành DNs',
+                'Thành Dn',
                 style: TextStyle(
                     fontFamily: 'Pacifico',
                     fontSize: 40.0,
@@ -39,50 +40,54 @@ class MyApp extends StatelessWidget {
                     letterSpacing: 2.5,
                     fontWeight: FontWeight.bold),
               ),
-              Container(
+              Card(
                 color: Colors.white,
                 margin: const EdgeInsets.only(
                     left: 10.0, top: 20.0, right: 10.0, bottom: 10.0),
-                padding: const EdgeInsets.symmetric(
-                    vertical: 10.0, horizontal: 20.0),
-                child: Row(
-                  children: const <Widget>[
-                    Icon(Icons.phone, color: Colors.teal),
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                    Text(
-                      '+84985690098',
-                      style: TextStyle(
-                          color: Colors.teal,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Source Sans Pro',
-                          letterSpacing: 2.5),
-                    )
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 10.0, horizontal: 20.0),
+                  child: Row(
+                    children: const <Widget>[
+                      Icon(Icons.phone, color: Colors.teal),
+                      SizedBox(
+                        width: 20.0,
+                      ),
+                      Text(
+                        '+84985690098',
+                        style: TextStyle(
+                            color: Colors.teal,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Source Sans Pro',
+                            letterSpacing: 2.5),
+                      )
+                    ],
+                  ),
                 ),
               ),
-              Container(
+              Card(
                 color: Colors.white,
                 margin: const EdgeInsets.only(
                     left: 10.0, top: 0.0, right: 10.0, bottom: 10.0),
-                padding: const EdgeInsets.symmetric(
-                    vertical: 10.0, horizontal: 20.0),
-                child: Row(
-                  children: const <Widget>[
-                    Icon(Icons.email, color: Colors.teal),
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                    Text(
-                      'romantic@deep.com',
-                      style: TextStyle(
-                          color: Colors.teal,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Source Sans Pro',
-                          letterSpacing: 2.5),
-                    )
-                  ],
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 10.0, horizontal: 20.0),
+                  child: Row(
+                    children: const <Widget>[
+                      Icon(Icons.email, color: Colors.teal),
+                      SizedBox(
+                        width: 20.0,
+                      ),
+                      Text(
+                        'romantic@deep.com',
+                        style: TextStyle(
+                            color: Colors.teal,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Source Sans Pro',
+                            letterSpacing: 2.5),
+                      )
+                    ],
+                  ),
                 ),
               )
             ],
