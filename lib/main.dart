@@ -15,45 +15,79 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-            child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: <Widget>[
-            Container(
-              width: 100.0,
-              height: 100.0,
-              color: Colors.white,
-              // margin: EdgeInsets.symmetric(vertical: 50, horizontal: 10),
-              // margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
-              child: Text('Hello 1'),
-            ),
-            SizedBox(
-              // #dnthanh#this is space
-              height: 20.0,
-            ),
-            Container(
-              width: 300.0,
-              height: 100.0,
-              color: Colors.red,
-              // margin: EdgeInsets.symmetric(vertical: 50, horizontal: 10),
-              // margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
-              child: Text('Hello 2'),
-            ),
-            Container(
-              width: 100.0,
-              height: 100.0,
-              color: Colors.blue,
-              // margin: EdgeInsets.symmetric(vertical: 50, horizontal: 10),
-              // margin: EdgeInsets.fromLTRB(30.0, 10.0, 50.0, 20.0),
-              child: Text('Hello 333'),
-            ),
-            Container(
-              width: double.infinity,
-              height: 20.0,
-              color: Colors.yellowAccent,
-            )
-          ],
-        )),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: <Widget>[
+              const CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/girl.jpg'),
+              ),
+              const Text(
+                'Thành DNs',
+                style: TextStyle(
+                    fontFamily: 'Pacifico',
+                    fontSize: 40.0,
+                    color: Colors.yellowAccent,
+                    fontWeight: FontWeight.bold),
+              ),
+              const Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20.0,
+                    color: Colors.pinkAccent,
+                    letterSpacing: 2.5,
+                    fontWeight: FontWeight.bold),
+              ),
+              Container(
+                color: Colors.white,
+                margin: const EdgeInsets.only(
+                    left: 10.0, top: 20.0, right: 10.0, bottom: 10.0),
+                padding: const EdgeInsets.symmetric(
+                    vertical: 10.0, horizontal: 20.0),
+                child: Row(
+                  children: const <Widget>[
+                    Icon(Icons.phone, color: Colors.teal),
+                    SizedBox(
+                      width: 20.0,
+                    ),
+                    Text(
+                      '+84985690098',
+                      style: TextStyle(
+                          color: Colors.teal,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Source Sans Pro',
+                          letterSpacing: 2.5),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                margin: const EdgeInsets.only(
+                    left: 10.0, top: 0.0, right: 10.0, bottom: 10.0),
+                padding: const EdgeInsets.symmetric(
+                    vertical: 10.0, horizontal: 20.0),
+                child: Row(
+                  children: const <Widget>[
+                    Icon(Icons.email, color: Colors.teal),
+                    SizedBox(
+                      width: 20.0,
+                    ),
+                    Text(
+                      'romantic@deep.com',
+                      style: TextStyle(
+                          color: Colors.teal,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Source Sans Pro',
+                          letterSpacing: 2.5),
+                    )
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
