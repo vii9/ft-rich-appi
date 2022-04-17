@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -18,20 +19,20 @@ class MyApp extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const CircleAvatar(
+            children: const <Widget>[
+              CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/girl.jpg'),
               ),
-              const Text(
-                'Thành Dn',
+              Text(
+                'Cris Dao',
                 style: TextStyle(
                     fontFamily: 'Pacifico',
                     fontSize: 40.0,
                     color: Colors.yellowAccent,
                     fontWeight: FontWeight.bold),
               ),
-              const Text(
+              Text(
                 'FLUTTER DEVELOPER',
                 style: TextStyle(
                     fontFamily: 'Source Sans Pro',
@@ -41,55 +42,43 @@ class MyApp extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
               Card(
-                color: Colors.white,
-                margin: const EdgeInsets.only(
-                    left: 10.0, top: 20.0, right: 10.0, bottom: 10.0),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 10.0, horizontal: 20.0),
-                  child: Row(
-                    children: const <Widget>[
-                      Icon(Icons.phone, color: Colors.teal),
-                      SizedBox(
-                        width: 20.0,
-                      ),
-                      Text(
-                        '+84985690098',
-                        style: TextStyle(
-                            color: Colors.teal,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Source Sans Pro',
-                            letterSpacing: 2.5),
-                      )
-                    ],
-                  ),
-                ),
-              ),
+                  color: Colors.white,
+                  margin: EdgeInsets.only(
+                      left: 10.0, top: 20.0, right: 10.0, bottom: 10.0),
+                  child: ListTile(
+                    leading: Icon(Icons.phone, color: Colors.teal),
+                    title: Text(
+                      '+84985690098',
+                      style: TextStyle(
+                          color: Colors.teal,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Source Sans Pro',
+                          letterSpacing: 2.5),
+                    ),
+                    subtitle: Text(
+                      'this is phone main',
+                      style: TextStyle(fontStyle: FontStyle.italic),
+                    ),
+                  )),
               Card(
-                color: Colors.white,
-                margin: const EdgeInsets.only(
-                    left: 10.0, top: 0.0, right: 10.0, bottom: 10.0),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 10.0, horizontal: 20.0),
-                  child: Row(
-                    children: const <Widget>[
-                      Icon(Icons.email, color: Colors.teal),
-                      SizedBox(
-                        width: 20.0,
-                      ),
-                      Text(
-                        'romantic@deep.com',
-                        style: TextStyle(
-                            color: Colors.teal,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'Source Sans Pro',
-                            letterSpacing: 2.5),
-                      )
-                    ],
-                  ),
-                ),
-              )
+                  color: Colors.white,
+                  margin: EdgeInsets.only(
+                      left: 10.0, top: 0.0, right: 10.0, bottom: 10.0),
+                  child: ListTile(
+                    leading: Icon(Icons.email, color: Colors.teal),
+                    title: Text(
+                      'romantic@deep.com',
+                      style: TextStyle(
+                          color: Colors.teal,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Source Sans Pro',
+                          letterSpacing: 2.5),
+                    ),
+                    subtitle: Text(
+                      'this is email main',
+                      style: TextStyle(fontStyle: FontStyle.italic),
+                    ),
+                  ))
             ],
           ),
         ),
@@ -112,4 +101,6 @@ class MyApp extends StatelessWidget {
     ),
     );
     }
+    padding: const EdgeInsets.symmetric(
+    vertical: 10.0, horizontal: 20.0)
  * **/
