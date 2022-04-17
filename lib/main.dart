@@ -41,10 +41,17 @@ class MyApp extends StatelessWidget {
                     letterSpacing: 2.5,
                     fontWeight: FontWeight.bold),
               ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.yellowAccent,
+                ),
+              ),
               Card(
                   color: Colors.white,
                   margin: EdgeInsets.only(
-                      left: 10.0, top: 20.0, right: 10.0, bottom: 10.0),
+                      left: 10.0, top: 5.0, right: 10.0, bottom: 10.0),
                   child: ListTile(
                     leading: Icon(Icons.phone, color: Colors.teal),
                     title: Text(
